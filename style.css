@@ -1,0 +1,194 @@
+body 
+{
+    margin: 0;
+    font-family: sans-serif;
+    background-color: grey;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: black; 
+}
+
+.logo img {
+    width: 40px;
+}
+
+.buttons .button-header {
+    margin-right: 5px; 
+}
+
+.button-header 
+{
+    padding: 10px; 
+    border: 2px solid white; 
+    border-radius: 5px;
+    text-decoration: none; 
+    color: white; 
+}
+
+.button-header:hover {
+    background-color: white; 
+    color: black; 
+}
+
+.wrapper 
+{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;  
+    flex-wrap: wrap;  
+}
+
+.card 
+{
+    background-color: white;
+    width: 200px;
+    border-radius: 20px;
+    padding:20px;
+    margin: 20px;
+    position: relative;
+    transition: .3s;
+}
+
+.card:hover
+{
+    transition: .3s;
+    box-shadow: 5px 5px 20px #1A1A19;
+}
+
+.card::before
+{
+    position: absolute;
+    text-align: center;
+    content: "Top";
+    width: 40px;
+    height: 40px;
+    top: -20px; 
+    right: -20px; 
+    background-color: red;
+    color: white;
+    border-radius: 100%; 
+    line-height: 40px;
+}
+
+.card-image {
+    width: 100%;
+    border-radius: 10%;
+}
+
+.card-sub {
+    font-size: 12px;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+.card-title {
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.card-button {
+    margin-top: 40px; 
+    text-align: center;
+}
+
+.card-butt {
+    padding: 10px; 
+    border: 2px solid black; 
+    border-radius: 5px;
+    text-decoration: none; 
+    color: black; 
+}
+
+.card-butt:hover {
+   background-color: black;
+   color: white;
+}
+
+.btn-menu 
+{
+    display: none;
+}
+
+.btn-menu li 
+{
+    width: 100px;
+    list-style: none;
+    position: relative;
+}
+
+.btn-menu a 
+{
+    display: block;
+    text-align: center;
+    padding: 10px;
+    border: 2px solid white; 
+    border-radius: 5px;
+    text-decoration: none; 
+    color: white; 
+    transition: all .5s;
+}
+
+.btn-menu a:hover {
+    background: white;
+    color:black;
+}
+
+.btn-menu ul {
+    position: absolute;
+    display: none;
+    padding: 0;
+    margin: 0; 
+    z-index: 1;
+}
+
+
+.btn-menu ul li a {
+    border-color: black; 
+    background-color: white;
+    color: black;
+}
+.btn-menu ul li a:hover {
+    border-color: black; 
+    background-color: black;
+    color: white;
+}
+
+.btn-menu li:hover ul 
+{
+    display: block;
+}
+
+
+@media screen and (max-width: 769px) 
+{
+    .buttons 
+    {
+        display: none;
+    }
+
+    .card 
+    {
+       width: 100%; 
+    }
+
+    .btn-menu
+    {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 960px) {
+
+    .card 
+    {
+        width: calc(50% - 80px) ; 
+    }
+}
+
+
