@@ -4,70 +4,246 @@
     <meta charset="UTF-8">
     <title>Project</title>
     <link rel = "stylesheet" href="style.css">
+
+    
+    <script>
+    function handleClickInfo(event) {
+      
+        var clickedElement = event.target;
+
+        var parent = clickedElement.closest('.card');
+
+        parent.style.transform = 'rotateY(180deg)';
+        parent.style.boxShadow = '5px 5px 20px #1A1A19';
+
+    }
+    function handleClickNoInfo(event) {
+      
+        var clickedElement = event.target;
+
+        var parent = clickedElement.closest('.card');
+
+        parent.style.transform = 'rotateY(0deg)';
+        parent.style.boxShadow = 'none';
+
+    }
+
+
+</script>
+
+
+
 </head>
 <body>
+    <div class="page">
     <header>
         <div class="logo"> 
             <img src="image/icon.png" alt="Ікона">
         </div>
         <div class="buttons"> 
-            <a href="#" class="button-header">Головна</a>
-            <a href="#" class="button-header">Про нас</a>
-            <a href="#" class="button-header">Контакти</a>
-            <a href="#" class="button-header">Запитання</a>
+            <a href="#main" class="button-header">Головна</a>
+            <a href="#about" class="button-header">Про нас</a>
+            <a href="#contact" class="button-header">Контакти</a>
+            <a href="#questions" class="button-header">Запитання</a>
         </div>
         <div class="btn-menu">
                 <li><a class="button-header" href="">Меню</a>
                     <ul>
-                        <li><a href="">Головна</a></li>
-                        <li><a href="">Про нас</a></li>
-                        <li><a href="">Контакти</a></li>
-                        <li><a href="">Запитання</a></li>
+                        <li><a href="#main">Головна</a></li>
+                        <li><a href="#about">Про нас</a></li>
+                        <li><a href="#contact">Контакти</a></li>
+                        <li><a href="#questions">Запитання</a></li>
                     </ul>
                 </li>
             </div>
         <div class="login-button"> 
-           <a href="#" class="button-header">Увійти</a>
+           <a href="login.html" class="button-header">Увійти</a>
         </div>
     </header>
 
 
-    <div class="wrapper">
+    <div class="wrapper" id="main">
         
+     
+
         <div class="card">
+        <div class="card-front">
             <img src="image/card.jpg" alt="Ікона" class="card-image">
             <div class="card-title"> GTR Nissan</div>
             <div class= "card-sub">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cursus sit amet dictum sit amet justo donec enim. 
             </div>
-            <div class="card-button">  <a class="card-butt" href="#">Придбати</a>
+            <div class="card-button">  
+                <a class="card-butt" href="#" onclick="handleClickInfo(event)">Придбати</a>
             </div>
         </div>
-
-        <div class="card">
-            <img src="image/card.jpg" alt="Ікона" class="card-image">
-            <div class="card-title"> GTR Nissan</div>
-            <div class= "card-sub">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cursus sit amet dictum sit amet justo donec enim. 
+        <div class="card-back">
+            <div class="card-content">
+                <p>Нема в наявності</p>
+                <a class="card-butt" href="#" onclick="handleClickNoInfo(event)">До товару</a>
             </div>
-            <div class="card-button">  <a class="card-butt" href="#">Придбати</a></div>
         </div>
-
-        <div class="card">
-            <img src="image/card.jpg" alt="Ікона" class="card-image">
-            <div class="card-title"> GTR Nissan</div>
-            <div class= "card-sub">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cursus sit amet dictum sit amet justo donec enim. 
-            </div>
-            <div class="card-button">  <a class="card-butt" href="#">Придбати</a></div>
         </div>
 
 
         <div class="card">
+        <div class="card-front">
             <img src="image/card.jpg" alt="Ікона" class="card-image">
             <div class="card-title"> GTR Nissan</div>
             <div class= "card-sub">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cursus sit amet dictum sit amet justo donec enim. 
             </div>
-            <div class="card-button">  <a class="card-butt" href="#">Придбати</a></div>
+            <div class="card-button">  
+                <a class="card-butt" href="#" onclick="handleClickInfo(event)">Придбати</a>
+            </div>
         </div>
+        <div class="card-back">
+            <div class="card-content">
+                <p>Нема в наявності</p>
+                <a class="card-butt" href="#" onclick="handleClickNoInfo(event)">До товару</a>
+            </div>
+        </div>
+        </div>
+
+
+        <div class="card">
+        <div class="card-front">
+            <img src="image/card.jpg" alt="Ікона" class="card-image">
+            <div class="card-title"> GTR Nissan</div>
+            <div class= "card-sub">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cursus sit amet dictum sit amet justo donec enim. 
+            </div>
+            <div class="card-button">  
+                <a class="card-butt" href="#" onclick="handleClickInfo(event)">Придбати</a>
+            </div>
+        </div>
+        <div class="card-back">
+            <div class="card-content">
+                <p>Нема в наявності</p>
+                <a class="card-butt" href="#" onclick="handleClickNoInfo(event)">До товару</a>
+            </div>
+        </div>
+        </div>
+
+
+        <div class="card">
+        <div class="card-front">
+            <img src="image/card.jpg" alt="Ікона" class="card-image">
+            <div class="card-title"> GTR Nissan</div>
+            <div class= "card-sub">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cursus sit amet dictum sit amet justo donec enim. 
+            </div>
+            <div class="card-button">  
+                <a class="card-butt" href="#" onclick="handleClickInfo(event)">Придбати</a>
+            </div>
+        </div>
+        <div class="card-back">
+            <div class="card-content">
+                <p>Нема в наявності</p>
+                <a class="card-butt" href="#" onclick="handleClickNoInfo(event)">До товару</a>
+            </div>
+        </div>
+        </div>
+
+
+        <div class="card">
+        <div class="card-front">
+            <img src="image/card.jpg" alt="Ікона" class="card-image">
+            <div class="card-title"> GTR Nissan</div>
+            <div class= "card-sub">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cursus sit amet dictum sit amet justo donec enim. 
+            </div>
+            <div class="card-button">  
+                <a class="card-butt" href="#" onclick="handleClickInfo(event)">Придбати</a>
+            </div>
+        </div>
+        <div class="card-back">
+            <div class="card-content">
+                <p>Нема в наявності</p>
+                <a class="card-butt" href="#" onclick="handleClickNoInfo(event)">До товару</a>
+            </div>
+        </div>
+        </div>
+
+
+        <div class="card">
+        <div class="card-front">
+            <img src="image/card.jpg" alt="Ікона" class="card-image">
+            <div class="card-title"> GTR Nissan</div>
+            <div class= "card-sub">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cursus sit amet dictum sit amet justo donec enim. 
+            </div>
+            <div class="card-button">  
+                <a class="card-butt" href="#" onclick="handleClickInfo(event)">Придбати</a>
+            </div>
+        </div>
+        <div class="card-back">
+            <div class="card-content">
+                <p>Нема в наявності</p>
+                <a class="card-butt" href="#" onclick="handleClickNoInfo(event)">До товару</a>
+            </div>
+        </div>
+        </div>
+
+
+        <div class="card">
+        <div class="card-front">
+            <img src="image/card.jpg" alt="Ікона" class="card-image">
+            <div class="card-title"> GTR Nissan</div>
+            <div class= "card-sub">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cursus sit amet dictum sit amet justo donec enim. 
+            </div>
+            <div class="card-button">  
+                <a class="card-butt" href="#" onclick="handleClickInfo(event)">Придбати</a>
+            </div>
+        </div>
+        <div class="card-back">
+            <div class="card-content">
+                <p>Нема в наявності</p>
+                <a class="card-butt" href="#" onclick="handleClickNoInfo(event)">До товару</a>
+            </div>
+        </div>
+        </div>
+
+
+        <div class="card">
+        <div class="card-front">
+            <img src="image/card.jpg" alt="Ікона" class="card-image">
+            <div class="card-title"> GTR Nissan</div>
+            <div class= "card-sub">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cursus sit amet dictum sit amet justo donec enim. 
+            </div>
+            <div class="card-button">  
+                <a class="card-butt" href="#" onclick="handleClickInfo(event)">Придбати</a>
+            </div>
+        </div>
+        <div class="card-back">
+            <div class="card-content">
+                <p>Нема в наявності</p>
+                <a class="card-butt" href="#" onclick="handleClickNoInfo(event)">До товару</a>
+            </div>
+        </div>
+        </div>
+
+
     </div>
 
+ <footer>
+        <div id="about" class="info">
+            <h2>Про нас</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cursus sit amet dictum sit amet justo donec enim.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cursus sit amet dictum sit amet justo donec enim. 
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cursus sit amet dictum sit amet justo donec enim. 
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cursus sit amet dictum sit amet justo donec enim. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cursus sit amet dictum sit amet justo donec enim. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cursus sit amet dictum sit amet justo donec enim.  </p>
+        </div>
+        <div id="contact" class="info">
+            <h2>Контакти</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cursus sit amet dictum sit amet justo donec enim. 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cursus sit amet dictum sit amet justo donec enim. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cursus sit amet dictum sit amet justo donec enim. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cursus sit amet dictum sit amet justo donec enim. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cursus sit amet dictum sit amet justo donec enim. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cursus sit amet dictum sit amet justo donec enim. 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cursus sit amet dictum sit amet justo donec enim. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cursus sit amet dictum sit amet justo donec enim. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cursus sit amet dictum sit amet justo donec enim. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cursus sit amet dictum sit amet justo donec enim. 
+            </p>
+        </div>
+        <div id="questions" class="info">
+            <h2>Питання</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cursus sit amet dictum sit amet justo donec enim. 
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cursus sit amet dictum sit amet justo donec enim. 
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cursus sit amet dictum sit amet justo donec enim. 
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cursus sit amet dictum sit amet justo donec enim. 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cursus sit amet dictum sit amet justo donec enim. </p>
+        </div>
+    </footer>
+    </div>
 </body>
 </html>
